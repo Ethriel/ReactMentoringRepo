@@ -1,9 +1,8 @@
 import "./App.css";
-
-import Lesson1, { Lesson } from "./Lessons/Lesson1";
+import AppLayout from "./Layout/app-layout";
 
 function App() {
-  return <Lesson1 />;
+  return <AppLayout />;
 }
 
 export default App;

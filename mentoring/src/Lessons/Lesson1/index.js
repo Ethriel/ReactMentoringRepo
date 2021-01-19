@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useLayoutEffect } from "react";
+import { withRouter } from "react-router-dom";
 
 import "./index.css";
 
@@ -65,7 +66,7 @@ const LifeCycleFunc = () => {
   return "LifeCycleFunc";
 };
 
-export const Lesson = () => {
+const Lesson = () => {
   const [count, setCount] = useState(0);
   //   const el = <input key={1} defaultValue={"Hello"}></input>;
   //   console.log(el);
@@ -80,4 +81,4 @@ export const Lesson = () => {
   );
 };
 
-export default Lesson;
+export default withRouter(Lesson);
