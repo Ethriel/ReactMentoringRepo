@@ -1,0 +1,12 @@
+:root {
+  --base-size: 10px;
+}
+
+.bordered-text {
+  border: 1px solid lightblue;
+  padding: var(--base-size);
+}
+
+.bordered-text + .bordered-text {
+  margin-top: var(--base-size);
+}

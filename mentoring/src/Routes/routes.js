@@ -1,17 +1,17 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
 
-import { home, lesson1 } from './routes-directions';
-
-import { LessonOne } from './routes-components';
+import routes from "./routes-components";
 
 const Routes = () => {
-    return (
-        <Switch>
-            <Route exact path={home} component={LessonOne}></Route>
-            <Route exact path={lesson1} component={LessonOne}></Route>
-        </Switch>
-    );
+  return (
+    <Switch>
+      <Route exact path={"/"} component={() => "Home sweet home"}></Route>
+      {routes.map(r => (
+        <Route key={r.path} exact {...r} />
+      ))}
+    </Switch>
+  );
 };
 
 export default Routes;
