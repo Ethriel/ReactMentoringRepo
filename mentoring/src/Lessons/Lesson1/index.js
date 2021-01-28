@@ -7,7 +7,7 @@ const TestComponent = ({}) => {
   return <span>{"Test"}</span>;
 };
 
-class LifeCycle extends React.Component {
+class LifeCycle extends React.PureComponent {
   constructor() {
     super();
     this.state = {

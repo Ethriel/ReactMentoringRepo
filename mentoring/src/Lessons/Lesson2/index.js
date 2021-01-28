@@ -30,9 +30,17 @@ const RedBox = ({ style, ...rest }) => (
 );
 
 // Direct HOC
-const withGreenColor = ComponentToWrap => props => (
-  <ComponentToWrap {...props} color={"green"} />
-);
+const withGreenColor = ComponentToWrap => {
+  const WITHGREENCOLOR = props => (
+    <ComponentToWrap {...props} color={"green"} />
+  );
+
+  WITHGREENCOLOR.displayName = `withGreenColor${
+    ComponentToWrap.displayName ?? ComponentToWrap.name
+  }`;
+
+  return WITHGREENCOLOR;
+};
 
 // Prop-friendly composition
 // makes interface easier
