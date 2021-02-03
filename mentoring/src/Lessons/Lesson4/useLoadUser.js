@@ -9,16 +9,16 @@ const useLoadUser = userId => {
   useEffect(() => {
     let ignore = false;
     let timeOutExec = 0;
+    const timedOutSetLoading = setTimeout(() => setLoading(true), 2000);
 
     const controller = new AbortController();
     const signal = controller.signal;
 
     const fetchUser = async () => {
-      const timedOutSetLoading = setTimeout(() => setLoading(true), 100);
       try {
         // setLoading(true);
 
-        // await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 1000));
         const response = await (
           await fetch(`${url}${userId}`, { signal })
         ).json();
@@ -32,10 +32,11 @@ const useLoadUser = userId => {
       }
     };
 
-    timeOutExec = setTimeout(fetchUser, 50);
+    timeOutExec = setTimeout(fetchUser, 500);
 
     return () => {
       clearTimeout(timeOutExec);
+      clearTimeout(timedOutSetLoading);
       ignore = true;
       controller.abort();
     };
