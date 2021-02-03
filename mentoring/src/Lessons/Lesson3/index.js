@@ -51,6 +51,29 @@ const defValue = {
   input: "hello",
   checked: false,
 };
+
+const useCombinedState = defaultValue => {
+  const [value, setValue] = useState(defaultValue ?? {});
+
+  const { input, checked } = value ?? {};
+
+  const handleCheckedChange = checked =>
+    setValue(value => ({ ...value, checked }));
+
+  const handleInputChangeWithCheckedState = input => {
+    setValue(value => ({ ...value, input }));
+
+    if (input === "Alex" && !checked) {
+      handleCheckedChange(true);
+    }
+  };
+
+  return [
+    [input, checked],
+    [handleInputChangeWithCheckedState, handleCheckedChange],
+  ];
+};
+
 // {input, checked}
 const CombinedComponent = ({ defaultValue = defValue }) => {
   const [value, setValue] = useState(defaultValue ?? {});
@@ -72,6 +95,11 @@ const CombinedComponent = ({ defaultValue = defValue }) => {
       handleCheckedChange(true);
     }
   };
+
+  // const [
+  //   [input, checked],
+  //   [handleInputChangeWithCheckedState, handleCheckedChange],
+  // ] = useCombinedState(defaultValue);
 
   //   useEffect(() => {
   //     if (input === "Alex" && !checked) {
