@@ -9,7 +9,7 @@ const useLoadUser = userId => {
   useEffect(() => {
     let ignore = false;
     let timeOutExec = 0;
-    const timedOutSetLoading = setTimeout(() => setLoading(true), 2000);
+    let timedOutSetLoading = 0;
 
     const controller = new AbortController();
     const signal = controller.signal;
@@ -17,6 +17,7 @@ const useLoadUser = userId => {
     const fetchUser = async () => {
       try {
         // setLoading(true);
+        timedOutSetLoading = setTimeout(() => setLoading(true), 100);
 
         await new Promise(resolve => setTimeout(resolve, 1000));
         const response = await (
@@ -32,7 +33,7 @@ const useLoadUser = userId => {
       }
     };
 
-    timeOutExec = setTimeout(fetchUser, 500);
+    timeOutExec = setTimeout(fetchUser, 200);
 
     return () => {
       clearTimeout(timeOutExec);
