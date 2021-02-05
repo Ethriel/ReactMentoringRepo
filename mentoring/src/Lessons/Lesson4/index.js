@@ -20,7 +20,7 @@ const UserDataLoader = ({ userId }) => {
 
   if (loading) return "...";
 
-  return <UserData key={data?.id} userId={data?.userId} title={data?.title} />;
+  return <UserData key={data?.id} userId={data?.id} title={data?.title} />;
 };
 
 const Lesson4 = () => {
