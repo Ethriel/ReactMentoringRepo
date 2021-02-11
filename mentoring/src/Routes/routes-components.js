@@ -2,6 +2,7 @@ import Lesson1 from "../Lessons/Lesson1/index";
 import Lesson2 from "../Lessons/Lesson2/index";
 import Lesson3 from "../Lessons/Lesson3/index";
 import Lesson4 from "../Lessons/Lesson4/index";
+import Lesson5 from "../Lessons/Lesson5/index";
 
 export default [
   { component: Lesson1, path: "/lesson1", title: "Lesson One - Intro" },
@@ -19,5 +20,10 @@ export default [
     component: Lesson4,
     path: "/lesson4",
     title: "Lesson Four - Using effects",
+  },
+  {
+    component: Lesson5,
+    path: "/lesson5",
+    title: "Lesson Five - Context",
   },
 ];
