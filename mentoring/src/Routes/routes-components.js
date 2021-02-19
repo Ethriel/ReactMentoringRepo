@@ -1,8 +1,10 @@
-import Lesson1 from "../Lessons/Lesson1/index";
-import Lesson2 from "../Lessons/Lesson2/index";
-import Lesson3 from "../Lessons/Lesson3/index";
-import Lesson4 from "../Lessons/Lesson4/index";
-import Lesson5 from "../Lessons/Lesson5/index";
+import Lesson1 from "../Lessons/Lesson1";
+import Lesson2 from "../Lessons/Lesson2";
+import Lesson3 from "../Lessons/Lesson3";
+import Lesson4 from "../Lessons/Lesson4";
+import Lesson5 from "../Lessons/Lesson5";
+import Lesson6 from "../Lessons/Lesson6";
+import Lesson7 from "../Lessons/Lesson7";
 
 export default [
   { component: Lesson1, path: "/lesson1", title: "Lesson One - Intro" },
@@ -25,5 +27,15 @@ export default [
     component: Lesson5,
     path: "/lesson5",
     title: "Lesson Five - Context",
+  },
+  {
+    component: Lesson6,
+    path: "/lesson6",
+    title: "Lesson Six - Full Control",
+  },
+  {
+    component: Lesson7,
+    path: "/lesson7",
+    title: "Lesson Seven - Children",
   },
 ];
