@@ -5,6 +5,7 @@ import Lesson4 from "../Lessons/Lesson4";
 import Lesson5 from "../Lessons/Lesson5";
 import Lesson6 from "../Lessons/Lesson6";
 import Lesson7 from "../Lessons/Lesson7";
+import Lesson8 from "../Lessons/Lesson8";
 
 export default [
   { component: Lesson1, path: "/lesson1", title: "Lesson One - Intro" },
@@ -37,5 +38,10 @@ export default [
     component: Lesson7,
     path: "/lesson7",
     title: "Lesson Seven - Children",
+  },
+  {
+    component: Lesson8,
+    path: "/lesson8",
+    title: "Lesson Eight - Prop types/Forward Ref",
   },
 ];
