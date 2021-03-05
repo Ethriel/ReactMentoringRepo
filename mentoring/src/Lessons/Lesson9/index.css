@@ -1,0 +1,40 @@
+.interstellar-container {
+  background: blue;
+  width: 1000px;
+  height: 200px;
+}
+
+.interstellar-container__ship {
+  border-radius: 50% 50%;
+  width: 200px;
+  height: 100px;
+  background: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interstellar-container__ship > * + * {
+  margin-left: 20px;
+}
+
+.interstellar-container__ship .interstellar-container__ship__Cooper {
+  border-radius: 50% 50%;
+  width: 40px;
+  height: 40px;
+  background: red;
+}
+
+.interstellar-container__ship .interstellar-container__ship__Dude {
+  border-radius: 50% 50%;
+  width: 40px;
+  height: 40px;
+  background: black;
+}
+
+.interstellar-container__ship .interstellar-container__ship__Robot {
+  border-radius: 50% 50%;
+  width: 40px;
+  height: 40px;
+  background: grey;
+}

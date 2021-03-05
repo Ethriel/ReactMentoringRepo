@@ -6,6 +6,7 @@ import Lesson5 from "../Lessons/Lesson5";
 import Lesson6 from "../Lessons/Lesson6";
 import Lesson7 from "../Lessons/Lesson7";
 import Lesson8 from "../Lessons/Lesson8";
+import Lesson9 from "../Lessons/Lesson9";
 
 export default [
   { component: Lesson1, path: "/lesson1", title: "Lesson One - Intro" },
@@ -43,5 +44,10 @@ export default [
     component: Lesson8,
     path: "/lesson8",
     title: "Lesson Eight - Prop types/Forward Ref",
+  },
+  {
+    component: Lesson9,
+    path: "/lesson9",
+    title: "Lesson Nine - To Test or not to Jest",
   },
 ];
