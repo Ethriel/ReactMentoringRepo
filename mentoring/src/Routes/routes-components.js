@@ -7,6 +7,7 @@ import Lesson6 from "../Lessons/Lesson6";
 import Lesson7 from "../Lessons/Lesson7";
 import Lesson8 from "../Lessons/Lesson8";
 import Lesson9 from "../Lessons/Lesson9";
+import Lesson10 from "../Lessons/Lesson10";
 
 export default [
   { component: Lesson1, path: "/lesson1", title: "Lesson One - Intro" },
@@ -49,5 +50,10 @@ export default [
     component: Lesson9,
     path: "/lesson9",
     title: "Lesson Nine - To Test or not to Jest",
+  },
+  {
+    component: Lesson10,
+    path: "/lesson10",
+    title: "Lesson Tennet - Redux-saga",
   },
 ];

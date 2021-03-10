@@ -20,7 +20,7 @@ const AppLayout = props => {
     setCollapsed(!collapsed);
   };
 
-  return (
+  const VirtualDom = (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <h1 style={{ color: "white", textAlign: "center" }}>React lessons</h1>
@@ -56,6 +56,10 @@ const AppLayout = props => {
       </Layout>
     </Layout>
   );
+
+  // console.log(VirtualDom);
+
+  return VirtualDom;
 };
 
 export default AppLayout;
